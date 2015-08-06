@@ -82,9 +82,6 @@ audio:not([controls]) {
 template {
   display: none; }
 
-a {
-  background-color: transparent; }
-
 a:active,
 a:hover {
   outline: 0; }
@@ -290,7 +287,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #EA5317;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -403,11 +400,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #ecf0f1;
+  margin: 10px;
+  text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #FF9505; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #A31621; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
