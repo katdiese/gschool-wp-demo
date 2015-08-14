@@ -1,0 +1,10 @@
+.row {
+  width: $grid_width;
+  @include rem(max-width, $grid_max-width);
+  @include rem(margin, 0 auto $grid_vertical-space);
+  @extend %clearfix;
+
+  @include breakpoint(large) {
+  	@include rem(max-width, $grid_max-width_large);
+  }
+}

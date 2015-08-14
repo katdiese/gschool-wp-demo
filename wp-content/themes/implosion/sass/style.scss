@@ -3,105 +3,60 @@ Theme Name: Implosion
 Theme URI: http://underscores.me/
 Author: Kathy Dieser
 Author URI: http://kathydieser.com
-Description: Word Press Theme
+Description: A demo theme for gSchool WP Workshop
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: implosion
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Implosion is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Text Domain: wp_demo
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+// Reset
+@import "libs/_reset";
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
+// Variables
+@import "variables/_colors";
+@import "variables/_breakpoints";
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
+// Functions, Extends, and Mixins
+@import "libs/_extends";
+@import "libs/_mixins";
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
 
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
+// Structure
+@import "grid/_settings";
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
+// Typography
+@import "typography/_fonts";
+@import "typography/_links";
+@import "typography/_headings";
+@import "typography/_text";
+@import "typography/_highlight";
+@import "typography/_code";
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+// Elements
+@import "elements/_buttons";
+@import "elements/_forms";
+@import "elements/_lists";
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+
+// Modules
+@import "modules/_page";
+@import "modules/_post";
+@import "modules/_comments";
+@import "modules/_header";
+@import "modules/_footer";
+@import "modules/_navigation";
+@import "modules/_sidebar";
+
+
+// Templates
+@import "templates/_home";
+
+
+// Debug
+@import "libs/_debug";

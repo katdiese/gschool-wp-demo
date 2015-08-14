@@ -1,0 +1,12 @@
+.post {
+	.entry-header {
+		@include rem(margin-bottom, 2rem);
+
+		.posted-on {
+			@include rem(font-size, 1.4rem);
+		}
+	}
+	.entry-content {
+		@include rem(margin-bottom, 2rem);
+	}
+}

@@ -1,0 +1,19 @@
+
+body {
+	background: $white;
+}
+
+#primary,
+#secondary {
+	float: left;
+}
+
+#primary {
+	width: 72%;
+	margin-right: 4%;
+}
+
+#secondary {
+	width: 24%;
+}
+

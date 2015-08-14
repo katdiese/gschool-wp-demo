@@ -1,0 +1,48 @@
+* {
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+
+// Color
+$body-copy-color: $dark-gray;
+
+
+// Text
+html {
+	font-size: 62.5%;
+}
+
+body {
+ color:$body-copy-color;
+ @include rem(font-size, 1.6rem);
+ @include font(Open Sans, 300);
+}
+
+p {
+	@include rem(margin-bottom, 1rem);
+}
+
+
+blockquote {
+	border-left: 4px solid $super-light-gray;
+	@include rem(margin, 2rem 0);
+	@include rem(padding-left, 1.5rem);
+}
+
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.entry-content {
+	line-height: 1.6;
+}
+
+.screen-reader-text {
+	display: none;
+}

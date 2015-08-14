@@ -1,0 +1,43 @@
+
+// Clearfix
+%clearfix {
+ *zoom: 1;
+
+ &:after { clear: both; }
+
+ &:after,
+ &:before {
+  content: '';
+  display: table;
+ }
+}
+
+
+// Override Default webkit styles
+%no-webkit {
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	box-shadow: none;
+
+	&:focus, &:active {
+		-webkit-appearance: none;
+		appearance: none;
+		outline: none;
+		border: none;
+		box-shadow: none;
+	}
+}
+
+
+%background-image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;   //  This Breaks Chrome
+
+  // Attachment scroll on mobile and unsupported browsers
+  html.touch &,
+  html.chrome & { background-attachment: scroll !important; }
+}

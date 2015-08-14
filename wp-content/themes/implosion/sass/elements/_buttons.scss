@@ -1,0 +1,22 @@
+.button {
+	background: $link-color;
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	@include rem(padding, 1rem 1.5rem);
+	@include font(Open Sans, 400);
+	@include rem(font-size, 1.3rem);
+	@include ease;
+
+	// Button Colors
+	&.green { background: $green; }
+	&.blue { background: $blue; }
+	&.red { background: $red; }
+	&.orange { background: $orange; }
+
+	// Hover Styles
+	&:hover {
+		background: $link-hover-color;
+		color: $white;
+	}
+}

@@ -1,0 +1,11 @@
+// Fallbacks
+$sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: 'Times New Roman', serif;
+
+
+// Fonts
+@mixin font($font, $weight: 400, $style: normal) {
+	font-family: '#{$font}', $sans-serif;
+	font-weight: $weight;
+	font-style: $style;
+}
