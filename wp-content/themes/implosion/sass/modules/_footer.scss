@@ -1,5 +1,54 @@
 .site-footer {
-	text-align: center;
 	@include rem(margin-top, 6rem);
+	background-color: $turquoise;
+
+	.row {
+		margin-bottom: 0;
+	}
+}
+.footer {
+	float: left;
+	height: 15em;
+	color: white;
+
+	h3 {
+		margin-left: 3em;
+		color: white;
+
+		&:first-of-type {
+			margin-top: 1em;
+		}
+	}
+	p {
+		margin-left: 4em;
+	}
+	.genericon {
+		color: $pink;
+		font-size: 3em;
+
+		&:hover {
+			color: white;
+			@include ease;
+		}
+	}
+}
+.secondHalf {
+	text-align: right;
+
+	h3, p {
+		margin: 0 3em 3em 3em;
+	}
+}
+#social {
+	list-style-type: none;
+	margin: 1em;
+
+	a {
+		color: $pink;
+	}
+
+	a:hover {
+		color: #fff;
+	}
 }
 

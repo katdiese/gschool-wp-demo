@@ -1,5 +1,4 @@
 .site-header {
-	background: $blue;
 	@include rem(padding, 1rem 0);
 	@include rem(margin-bottom, 4rem);
 
@@ -17,13 +16,30 @@
 		}
 	}
 	nav {
-		float: right;
+		text-align: center;
+		background-color: $turquoise;
+		height: 4em;
 		position: relative;
 		@include rem(top, 1.75rem);
 
 		li {
 			a {
 				text-decoration: none;
+				display: inline-block;
+				margin-top: 0.5em;
+				padding: .25em;
+				text-decoration: none;
+				font-family: $sans-serif;
+				font-weight: 700;
+				font-size: 1.4em;
+				color: $pink;
+				border: 1px solid white;
+				border-radius: 10px;
+
+				&:hover {
+					background-color: white;
+					cursor: pointer;
+				}
 			}
 		}
 	}

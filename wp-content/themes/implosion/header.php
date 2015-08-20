@@ -28,15 +28,14 @@
 		<div class= "row">
 			<div class="site-branding">
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-    <img src="<?php bloginfo('template_directory'); ?>/images/logo_placeholder.png" alt="Your Image Description Here" />
+    <img src="<?php bloginfo('template_directory'); ?>/images/Pet-Appearance-Logo-1.png" alt="Your Image Description Here" />
 </a>
 			</div><!-- .site-branding -->
-
+		</div>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'implosion' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="genericon genericon-menu"></span></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

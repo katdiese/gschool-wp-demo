@@ -1,9 +1,27 @@
 nav {
-  &.nav {}
+  &.main-navigation {
+
+    @include breakpoint(tablet) {
+      .menu-main-menu-container {
+        display: none;
+        position: absolute;
+      }
+    }
+  &.toggled {
+      .genericon:before { 
+      content: '\f405';
+      font-size: 3em;
+      position: absolute;
+      top: -0.75em;
+      @include ease;
+    }
+    .menu-main-menu-container {display: block;}
+  }
+  }
 
   ul {
     li {
-      list-style: none;
+      display: inline-block;
       a {}
     }
   }
@@ -12,6 +30,8 @@ nav {
 
 .menu-toggle {
 	display: none;
+  position: absolute;
+  top: 0.5em;
 
 	@include breakpoint(tablet) {
 		display: inline-block;

@@ -45,6 +45,8 @@ function implosion_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'implosion' ),
+		'footer' => esc_html__( 'Footer', 'implosion' ),
+		'social' => esc_html__( 'Social', 'implosion' ),
 	) );
 
 	/*
@@ -115,6 +117,8 @@ add_action( 'widgets_init', 'implosion_widgets_init' );
  */
 function implosion_scripts() {
 	wp_enqueue_style( 'implosion-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'implosion-genericons', get_template_directory_uri() ) . '/fonts/genericons/genericons.css';
 
 	wp_enqueue_script( 'implosion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
