@@ -142,3 +142,12 @@
   }
 }
 
+//column shortcodes
+.content-column {
+  padding-right: 2%;
+
+  &.last_column {
+    padding-right: 0;
+  }
+}
+

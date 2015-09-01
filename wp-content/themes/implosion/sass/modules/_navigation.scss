@@ -7,24 +7,39 @@ nav {
         position: absolute;
       }
     }
-  &.toggled {
-      .genericon:before { 
-      content: '\f405';
-      font-size: 3em;
-      position: absolute;
-      top: -0.75em;
-      @include ease;
-    }
-    .menu-main-menu-container {display: block;}
-  }
-  }
-
   ul {
     li {
       display: inline-block;
       a {}
     }
   }
+  &.toggled {
+      .genericon:before { 
+      content: '\f405';
+      font-size: 3em;
+      @include ease;
+    }
+
+    li {
+      display: block;
+      border-radius: none;
+      background-color: #fff;
+
+      &:first-of-type {
+        padding-top: 1em;
+      }
+      &:last-of-type {
+        padding-bottom: 1em;
+        border-radius: 0 0 10px 10px;
+      }
+    }
+    .menu-main-menu-container {
+      display: block;
+      text-align: left;
+    }
+  }
+  }
+
 }
 
 

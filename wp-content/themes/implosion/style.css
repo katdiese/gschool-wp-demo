@@ -67,11 +67,11 @@ img {
 
 /* Colors
 ================================================================================================= */
-.row, #comments .comment-list .comment .comment-meta, #comments .comment-list .comment .reply {
+.row, body.post-type-archive-gallery .nav-links, #content, #comments .comment-list .comment .comment-meta, #comments .comment-list .comment .reply {
   *zoom: 1; }
-  .row:after, #comments .comment-list .comment .comment-meta:after, #comments .comment-list .comment .reply:after {
+  .row:after, body.post-type-archive-gallery .nav-links:after, #content:after, #comments .comment-list .comment .comment-meta:after, #comments .comment-list .comment .reply:after {
     clear: both; }
-  .row:after, #comments .comment-list .comment .comment-meta:after, #comments .comment-list .comment .reply:after, .row:before, #comments .comment-list .comment .comment-meta:before, #comments .comment-list .comment .reply:before {
+  .row:after, body.post-type-archive-gallery .nav-links:after, #content:after, #comments .comment-list .comment .comment-meta:after, #comments .comment-list .comment .reply:after, .row:before, body.post-type-archive-gallery .nav-links:before, #content:before, #comments .comment-list .comment .comment-meta:before, #comments .comment-list .comment .reply:before {
     content: '';
     display: table; }
 
@@ -88,14 +88,14 @@ textarea, input[type="text"], input[type="email"], input[type="tel"], input[type
     border: none;
     box-shadow: none; }
 
-.row {
+.row, body.post-type-archive-gallery .nav-links {
   width: 100%;
   max-width: 1140px;
   max-width: 114rem;
   margin: 0 auto 55px;
   margin: 0 auto 5.5rem; }
   @media (min-width: 1500px) {
-    .row {
+    .row, body.post-type-archive-gallery .nav-links {
       max-width: 1550px;
       max-width: 155rem; } }
 
@@ -266,17 +266,22 @@ textarea, input[type="text"], input[type="email"], input[type="tel"], input[type
     margin-right: 0;
     padding: 0; }
 
+.content-column {
+  padding-right: 2%; }
+  .content-column.last_column {
+    padding-right: 0; }
+
 a {
-  color: #2ecc71;
+  color: #00a69d;
   -webkit-transition: all 333ms ease-in-out;
           transition: all 333ms ease-in-out; }
   a:focus, a:hover, a:active {
     outline: 0; }
   a:hover {
-    color: #e67e22; }
+    color: #ec238f; }
 
 h1, h2, h3, h4, h5 {
-  color: #3498db;
+  color: #ec238f;
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-bottom: 1rem;
@@ -284,10 +289,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   font-style: normal; }
   h1 a, a h1, h2 a, a h2, h3 a, a h3, h4 a, a h4, h5 a, a h5 {
-    color: #3498db;
+    color: #ec238f;
     text-decoration: none; }
     h1 a:hover, a h1:hover, h2 a:hover, a h2:hover, h3 a:hover, a h3:hover, h4 a:hover, a h4:hover, h5 a:hover, a h5:hover {
-      color: #e67e22; }
+      color: #ec238f; }
 
 h1 {
   font-size: 45px;
@@ -327,6 +332,9 @@ body {
 p {
   margin-bottom: 10px;
   margin-bottom: 1rem; }
+  p.intro-text {
+    font-size: 20px;
+    font-size: 2rem; }
 
 blockquote {
   border-left: 4px solid #f7f7f7;
@@ -372,7 +380,7 @@ button {
     color: #ec238f; }
 
 .button, input[type="submit"], #comments .comment-list .comment .reply .comment-reply-link {
-  background: #2ecc71;
+  background: #00a69d;
   color: #fefefe;
   text-transform: uppercase;
   text-decoration: none;
@@ -394,7 +402,7 @@ button {
   .button.orange, input.orange[type="submit"], #comments .comment-list .comment .reply .orange.comment-reply-link {
     background: #e67e22; }
   .button:hover, input[type="submit"]:hover, #comments .comment-list .comment .reply .comment-reply-link:hover {
-    background: #e67e22;
+    background: #ec238f;
     color: #fefefe; }
 
 textarea, input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="password"], input[type="search"] {
@@ -540,7 +548,7 @@ body {
   padding: 1rem 0;
   margin-bottom: 40px;
   margin-bottom: 4rem; }
-  .site-header .row {
+  .site-header .row, .site-header body.post-type-archive-gallery .nav-links, body.post-type-archive-gallery .site-header .nav-links {
     margin-bottom: 0; }
   .site-header .site-branding {
     float: left; }
@@ -576,12 +584,12 @@ body {
   margin-top: 60px;
   margin-top: 6rem;
   background-color: #00a69d; }
-  .site-footer .row {
+  .site-footer .row, .site-footer body.post-type-archive-gallery .nav-links, body.post-type-archive-gallery .site-footer .nav-links {
     margin-bottom: 0; }
 
 .footer {
   float: left;
-  height: 15em;
+  height: 10em;
   color: white; }
   .footer h3 {
     margin-left: 3em;
@@ -611,27 +619,35 @@ body {
   #social a:hover {
     color: #fff; }
 
-@media (max-width: 910px) {
+@media (max-width: 982px) {
   nav.main-navigation .menu-main-menu-container {
     display: none;
     position: absolute; } }
+nav.main-navigation ul li {
+  display: inline-block; }
 nav.main-navigation.toggled .genericon:before {
   content: '\f405';
   font-size: 3em;
-  position: absolute;
-  top: -0.75em;
   -webkit-transition: all 333ms ease-in-out;
           transition: all 333ms ease-in-out; }
+nav.main-navigation.toggled li {
+  display: block;
+  border-radius: none;
+  background-color: #fff; }
+  nav.main-navigation.toggled li:first-of-type {
+    padding-top: 1em; }
+  nav.main-navigation.toggled li:last-of-type {
+    padding-bottom: 1em;
+    border-radius: 0 0 10px 10px; }
 nav.main-navigation.toggled .menu-main-menu-container {
-  display: block; }
-nav ul li {
-  display: inline-block; }
+  display: block;
+  text-align: left; }
 
 .menu-toggle {
   display: none;
   position: absolute;
   top: 0.5em; }
-  @media (max-width: 910px) {
+  @media (max-width: 982px) {
     .menu-toggle {
       display: inline-block; } }
 
@@ -641,6 +657,110 @@ nav ul li {
   .widget ul li {
     margin-bottom: 10px;
     margin-bottom: 1rem; }
+
+body.home header {
+  margin-bottom: 0; }
+body.home #primary {
+  width: 100%;
+  margin-right: 0; }
+body.home .hero {
+  display: block;
+  width: 100%;
+  padding: 150px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center !important;
+  background-attachment: fixed; }
+  body.home .hero h1, body.home .hero p {
+    color: #fff; }
+body.home .services {
+  text-align: center;
+  margin-top: 5em; }
+  body.home .services img {
+    height: 120px;
+    margin: 3em 0; }
+  body.home .services p {
+    text-align: left;
+    padding: 0 1.5em; }
+body.home .gallery {
+  padding-top: 5em; }
+  body.home .gallery a {
+    text-align: center;
+    padding: 10em;
+    background-size: cover;
+    background-position: center !important;
+    text-decoration: none; }
+  body.home .gallery h4 {
+    display: none; }
+
+body.post-type-archive-gallery #primary {
+  width: 100%;
+  margin: 0;
+  text-align: center; }
+body.post-type-archive-gallery .gallery-preview {
+  text-align: center;
+  padding: 130px 0;
+  background-size: cover;
+  background-position: center !important;
+  text-decoration: none;
+  height: 10em; }
+body.post-type-archive-gallery h4 {
+  opacity: 0;
+  -webkit-transition: all 333ms ease-in-out;
+          transition: all 333ms ease-in-out;
+  color: #fff; }
+  body.post-type-archive-gallery h4:hover {
+    opacity: 4; }
+body.post-type-archive-gallery .nav-links .nav-previous {
+  float: left; }
+body.post-type-archive-gallery .nav-links .nav-next {
+  float: right; }
+
+body.single-gallery #primary {
+  width: 100%;
+  margin-right: 0; }
+body.single-gallery h1 {
+  display: none; }
+
+.featured-image {
+  display: block;
+  width: 45%;
+  margin: auto; }
+
+.related-posts .row, .related-posts body.post-type-archive-gallery .nav-links, body.post-type-archive-gallery .related-posts .nav-links {
+  width: 100%;
+  max-width: 99999999999px; }
+.related-posts .gallery a {
+  text-align: center;
+  height: 100px;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center !important;
+  text-decoration: none; }
+
+body.page-contact {
+  background-color: blue; }
+  body.page-contact h2 {
+    margin-top: 2em; }
+
+iframe {
+  width: 100%;
+  margin-top: 3em; }
+
+#ninja_forms_form_5_all_fields_wrap {
+  margin-top: 3em; }
+
+.contact-info .row, .contact-info body.post-type-archive-gallery .nav-links, body.post-type-archive-gallery .contact-info .nav-links {
+  width: 100%;
+  max-width: 99999999px; }
+
+body.page-groom #primary {
+  width: 100%;
+  margin-right: 0; }
+
+.cat-groom h1 {
+  text-align: center;
+  padding: 1em; }
 
 /*
     pesticide v0.1.0 . @mrmrs . MIT

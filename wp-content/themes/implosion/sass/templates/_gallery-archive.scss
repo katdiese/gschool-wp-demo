@@ -1,0 +1,37 @@
+body.post-type-archive-gallery {
+	#primary {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+		.gallery-preview {
+			text-align: center;
+			padding: 130px 0;
+			background-size: cover;
+			background-position: center !important;
+			text-decoration: none;
+			height: 10em;
+		}
+		h4 {
+			opacity: 0;
+			
+			@include ease;
+			color: #fff;
+
+		&:hover {
+			opacity: 4;
+		}
+	}
+	.nav-links {
+		@extend .row;
+
+		.nav-previous {
+			float: left;
+		}
+		.nav-next {
+			float: right;
+		}
+	}
+}
+
+	

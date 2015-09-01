@@ -10,7 +10,7 @@
  */
 
 ?>
-	</div>
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -20,10 +20,7 @@
 					<h3>Pet Appearance Grooming</h3>
 					<h3>556 Daly Rd, Coventry, CT</h3>
 					<p>Hours:</p>
-					<p>Monday-Friday: 9am - 4pm</p>
-					<p>Saturday: 9am-3pm</p>
-					<p>Sunday: Closed</p>
-					<p>Or by appointment</p>
+					<p>By Appointment Only</p>
 				</div>
 				<div class="footer column one_half secondHalf">
 					<h3>Phone: (860)-742-9831</3>

@@ -1,1 +1,50 @@
-body.home {}
+body.home {
+	header {
+		margin-bottom: 0;
+	}
+	#primary {
+		width: 100%;
+		margin-right: 0;
+	}
+	.hero {
+		display: block;
+		width: 100%;
+		padding: 150px 0;
+		text-align: center;
+		background-size: cover;
+		background-position: center !important;
+		background-attachment: fixed;
+
+		h1, p {
+			color: #fff;
+		}
+	}
+	.services {
+		text-align: center;
+		margin-top: 5em;
+
+		img {
+			height: 120px;
+			margin: 3em 0;
+		}
+
+		p {
+			text-align: left;
+			padding: 0 1.5em;
+		}
+	}
+	.gallery {
+		padding-top: 5em;
+		a{
+			text-align: center;
+			padding: 10em;
+			background-size: cover;
+			background-position: center !important;
+			text-decoration: none;
+		}
+		h4 {
+			display: none;
+		}
+
+	}
+}

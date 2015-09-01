@@ -47,6 +47,7 @@ function implosion_setup() {
 		'primary' => esc_html__( 'Primary Menu', 'implosion' ),
 		'footer' => esc_html__( 'Footer', 'implosion' ),
 		'social' => esc_html__( 'Social', 'implosion' ),
+		'faq' => esc_html__( 'FAQ', 'implosion' ),
 	) );
 
 	/*
@@ -154,3 +155,17 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+	// add the file extension to the array
+
+	$existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+	return $existing_mimes;
+
+}

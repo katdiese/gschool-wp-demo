@@ -1,0 +1,30 @@
+body.single-gallery {
+	#primary {
+		width: 100%;
+		margin-right: 0;
+	}
+	h1 {
+		display: none;
+	}
+}
+.featured-image {
+	display: block;
+	width: 45%;
+	margin: auto;
+}
+.related-posts {
+	.row {
+		width: 100%;
+		max-width: 99999999999px;
+	}
+	.gallery {
+			a{
+				text-align: center;
+				height: 100px;
+				padding: 100px 0;
+				background-size: cover;
+				background-position: center !important;
+				text-decoration: none;
+			}
+		}
+}
