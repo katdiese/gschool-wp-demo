@@ -24,7 +24,7 @@ function the_posts_navigation() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', 'implosion' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( esc_html__( ' posts', 'implosion' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>

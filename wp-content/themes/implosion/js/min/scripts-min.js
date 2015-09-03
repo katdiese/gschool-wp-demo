@@ -1,0 +1,1 @@
+$(function(){$(".faq-question").click(function(){$(this).hasClass("active")?($(this).next(".faq-answer").removeClass("active"),$(this).removeClass("active")):($(this).next(".faq-answer").addClass("active"),$(this).addClass("active"))})});

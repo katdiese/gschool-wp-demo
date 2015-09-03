@@ -102,7 +102,9 @@ textarea, input[type="text"], input[type="email"], input[type="tel"], input[type
 .column {
   float: left;
   padding: 0 0%;
-  margin: 0 0% 0 0; }
+  margin: 0 0% 0 0;
+  max-width: 90%;
+  margin: auto; }
   .column:first-of-type, .column:first-child {
     padding-left: 0; }
   .column:last-of-type, .column:last-child {
@@ -453,6 +455,10 @@ body {
 #secondary {
   width: 24%; }
 
+.content-area {
+  width: 85%;
+  margin: auto; }
+
 .post .entry-header {
   margin-bottom: 20px;
   margin-bottom: 2rem; }
@@ -761,6 +767,65 @@ body.page-groom #primary {
 .cat-groom h1 {
   text-align: center;
   padding: 1em; }
+
+.faq-question {
+  text-align: center;
+  display: block;
+  color: black;
+  background-color: #00a69d;
+  height: 2.5em;
+  margin: .5em;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.5em; }
+  .faq-question:hover {
+    cursor: pointer; }
+  .faq-question.active {
+    background-color: #ec238f; }
+
+.faq-answer {
+  display: none; }
+  .faq-answer.active {
+    display: block;
+    padding: .75em; }
+
+.faqTitle {
+  text-align: center; }
+
+#faq {
+  display: block; }
+
+.faqMenu a {
+  font-weight: bold;
+  font-size: 1.5em; }
+
+.unhide {
+  display: block; }
+
+.testimonialTitle {
+  text-align: center; }
+
+.testimonialField {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid #ec238f; }
+
+.staff {
+  display: block; }
+
+.eachStaff {
+  width: 10em;
+  padding: 2em;
+  text-align: center; }
+
+.policies h2 {
+  text-align: center; }
+
+.staff h2 {
+  text-align: center; }
 
 /*
     pesticide v0.1.0 . @mrmrs . MIT

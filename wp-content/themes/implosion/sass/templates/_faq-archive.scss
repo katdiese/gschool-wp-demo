@@ -1,0 +1,40 @@
+.faq-question {
+	text-align: center;
+	display: block;
+	color: black;
+	background-color: $turquoise;
+	height: 2.5em;
+	margin: .5em;
+	font-weight: bold;
+	border-radius: 10px;
+	font-size: 1.5em;
+
+	&:hover {
+		cursor: pointer;
+	}
+	&.active {
+		background-color: $pink;
+	}
+}
+.faq-answer {
+	display: none;
+
+	&.active {
+		display: block;
+		padding: .75em;
+	}
+}
+.faqTitle {
+	text-align: center;
+}
+
+#faq {
+	display: block;
+}
+.faqMenu a {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.unhide {
+	display: block;
+}

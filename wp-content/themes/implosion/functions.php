@@ -48,6 +48,7 @@ function implosion_setup() {
 		'footer' => esc_html__( 'Footer', 'implosion' ),
 		'social' => esc_html__( 'Social', 'implosion' ),
 		'faq' => esc_html__( 'FAQ', 'implosion' ),
+		'services' => esc_html__( 'Services', 'implosion' ),
 	) );
 
 	/*
@@ -82,6 +83,13 @@ function implosion_setup() {
 }
 endif; // implosion_setup
 add_action( 'after_setup_theme', 'implosion_setup' );
+
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-latest.min.js", false, null);
+    wp_enqueue_script('jquery');
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -124,6 +132,8 @@ function implosion_scripts() {
 	wp_enqueue_script( 'implosion-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'implosion-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'implosion-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery') );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

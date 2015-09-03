@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary cat-groom" class="content-area">
-		<main id="main" class="site-main cat-groom row" role="main">
+		<main id="main" class="site-main cat-groom column" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

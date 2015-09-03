@@ -4,6 +4,8 @@
   float: left;
   padding: 0 $grid_padding;
   margin: 0 $grid_gutter 0 0;
+  max-width: 90%;
+  margin: auto;
 
   &:first-of-type,
   &:first-child {

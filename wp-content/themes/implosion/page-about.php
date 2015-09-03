@@ -14,24 +14,48 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="content-area">
+		<main id="main" class="site-main column" role="main">
+
 
 			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="policies"><?php get_template_part( 'template-parts/content', 'page' ); ?></div>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<div class="row policies">
+					<?php the_field('policies_text'); ?>
+				</div>
+
+				<div class="row staff">
+				<h2 class="staffTitle">Staff</h2>
 
 				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+			    // The Arguments
+			    $args = array(
+			        'post_type' => 'staff',
+			        'posts_per_page' => 2
+			    );
+			    // Start Loop
+			    $loop = new WP_Query( $args );
+			    while ( $loop->have_posts() ) : $loop->the_post();
 				?>
+
+					<div class="column one_half eachStaff">
+						<img src="<?php the_field('staff_image'); ?>">
+						<h3><?php the_title(); ?></h3>
+						<p><?php the_content(); ?></p>
+					</div>
+					<?php
+				    // End Loop
+				    endwhile;
+				    wp_reset_postdata();
+					?>
+				</div>
+
+
 
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
